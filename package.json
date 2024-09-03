@@ -6,13 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "pre-commit": "next lint"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "next": "14.2.7",
     "react": "^18",
     "react-bootstrap": "^2.10.4",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
     "eslint": "^8",
@@ -26,7 +35,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
-    "prop-types": "^15.8.1"
+    "prettier": "^3.3.3"
   }
 }
