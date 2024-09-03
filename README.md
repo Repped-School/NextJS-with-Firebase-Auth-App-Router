@@ -1,6 +1,6 @@
-# React/Next.js Template
+# NextJS with Firebase Auth App Router Template
 
-[See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
+[See Live Demo of this Template](https://drt-next-js-template-app-router.netlify.app/)
 
 ## Topics
 - [Get Started](#get-started)
@@ -30,8 +30,7 @@ ___
 1. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
-
+<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://github.com/user-attachments/assets/deae25f0-01d5-44b4-be60-7297b0f6f0ef">
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
@@ -49,7 +48,7 @@ Netlify will automatically detect your project and prepopulate the settings, but
 #### Additional Steps to Take on Netlify
 - Add Environmental Variables
     - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
+        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there if you did not add them when you were deploying your site
 
 - Update Firebase URL Settings
     - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
@@ -59,4 +58,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-# NextJS-with-Firebase-Auth-App-Router-
