@@ -56,5 +56,26 @@ module.exports = {
         },
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']], // Adjust based on your project structure
+        extensions: ['.js', '.jsx', '.ts', '.tsx'], // Ensure these match your project files
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'], // Ensure these extensions are set correctly
+      },
+    },
   },
 };
