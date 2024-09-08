@@ -66,6 +66,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    // Add the rule below to enforce PropTypes in your components
+    'react/prop-types': ['error', { skipUndeclared: false }],
   },
   settings: {
     'import/resolver': {
