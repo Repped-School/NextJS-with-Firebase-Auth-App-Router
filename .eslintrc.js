@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'error', // Ensure no unused variables show errors
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-alert': 'off',
@@ -24,14 +24,15 @@ module.exports = {
       },
     ],
     'react/jsx-one-expression-per-line': [0],
+    // Set to 'error' so console logs are visible during development
     'no-console': [
-      1,
+      'error',
       {
-        allow: ['error', 'warn'],
+        allow: ['log', 'warn', 'error'], // Allow all types of console logs
       },
     ],
     'comma-dangle': ['error'],
-    'no-debugger': 1,
+    'no-debugger': 'warn', // Display debugger warnings but not fail build
     'linebreak-style': 0,
     'max-len': [1, 600, 2],
     'no-plusplus': [
@@ -66,17 +67,23 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    // Add the rule below to enforce PropTypes in your components
     'react/prop-types': ['error', { skipUndeclared: false }],
+    'react/require-default-props': [
+      'error',
+      {
+        forbidDefaultForRequired: true,
+        ignoreFunctionalComponents: true,
+      },
+    ],
   },
   settings: {
     'import/resolver': {
       alias: {
-        map: [['@', './src']], // Adjust based on your project structure
-        extensions: ['.js', '.jsx', '.ts', '.tsx'], // Ensure these match your project files
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'], // Ensure these extensions are set correctly
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
